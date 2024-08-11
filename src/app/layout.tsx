@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import clsx from "clsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="min-h-screen">
+      <body className={clsx(inter.className, "min-h-screen w-full p-0 bg-[#fce1c7]", { 
+        "debug-screens": process.env.NODE_ENV === "development"
+      })}>
+        {children}
+      </body>
     </html>
   );
 }

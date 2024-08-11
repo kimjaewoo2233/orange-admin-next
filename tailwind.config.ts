@@ -8,13 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        'plex-sans': ['"IBM Plex Sans"', 'sans-serif'],
       },
+      boxShadow: {
+        'orange': '0px 0px 4px rgba(255, 142, 41, 0.1)',
+      }
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate"),
+    require('tailwindcss-debug-screens')
+  ],
 };
 export default config;
