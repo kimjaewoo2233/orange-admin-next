@@ -7,7 +7,7 @@ type InputVariants = "home" | "secondary" | "none";
 
 const inputVariants: VariantStyles<InputVariants> = {
     home: {
-        default: ""
+        default: "h-[38px] pr-8 pl-4 py-5 rounded-[30px] border border-solid border-[#E1E1E1]"
     },
     secondary: {
         default: ""
@@ -32,6 +32,7 @@ const Input = forwardRef(
             <input
                 ref={ref}
                 className={clsx(
+                    "outline-none",
                     className,
                     inputVariants[variant].default
                 )}
