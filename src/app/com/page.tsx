@@ -1,6 +1,7 @@
 import Card from "@/components/card";
 import MemberInfo from "@/components/header/member-info";
 import SearchBox from "@/components/header/search-box";
+import LincChart from "@/components/line-chart";
 import Sidebar from "@/components/sidebar";
 import MenuItem from "@/components/ui/menu-item";
 
@@ -21,6 +22,10 @@ export default function ComPage() {
                     <Card kind="sales"/>
                     <Card kind="customers"/>
                     <Card kind="avg"/>
+               </section>
+
+               <section>
+                <LincChart/>
                </section>
             </div>
         </div>
